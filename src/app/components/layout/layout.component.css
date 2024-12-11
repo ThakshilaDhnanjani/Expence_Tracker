@@ -1,0 +1,8 @@
+.navbar-brand img {
+    width: auto; /* or set a specific width */
+    height: 60px; /* Adjust this value based on your navbar height */
+  }
+  form img {
+    margin-left: 50px; /* Adjust this value to create more gap */
+  }
+  

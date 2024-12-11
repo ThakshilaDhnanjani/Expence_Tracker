@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">
+      <img
+        src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/20/7f/a0207fa4-fbc9-7dbe-d948-1692a96e91b9/AppIcon-0-0-85-220-0-4-0-2x-P3.png/1200x600bf.png"
+        alt="Logo"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="navigateTo('/layout/dashboard')"
+            >Dashboard</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="navigateTo('/layout/expenses')"
+            >Expense</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="javascript:void(0)"
+            (click)="navigateTo('/download')"
+            >Download</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex" (submit)="onSearch()">
+        <input
+          class="form-control me-2"
+          type="text"
+          placeholder="Search"
+          [(ngModel)]="searchQuery"
+          name="search"
+        />
+        <button class="btn btn-primary" type="button" (click)="onSearch()">
+          Search
+        </button>
+        <img
+          src="https://cbx-prod.b-cdn.net/COLOURBOX23305589.jpg?width=800&height=800&quality=70"
+          height="40px"
+          alt="User Profile"
+        />
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
